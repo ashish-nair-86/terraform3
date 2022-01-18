@@ -5,7 +5,7 @@ resource "aws_key_pair" "dove-key" {
 }
 
 resource "aws_instance" "dover-instance" {
-  count                  = 5
+  count                  = 4
   ami                    = var.AMIS[var.REGION]
   instance_type          = "t2.micro"
   availability_zone      = var.ZONE1
