@@ -22,7 +22,7 @@ pipeline {
         }
         stage ("terrafrom plan") {
             steps {
-                 sh 'terraform plan -var 'count=${count}' -var 'name=${NAME}' -out terraform.tfplan' 
+                 sh 'terraform plan -var 'count=${COUNT}' -var 'name=${NAME}' -out terraform.tfplan' 
                  stash name: "terraform-plan", includes: "terraform.tfplan"
                      }
         }
